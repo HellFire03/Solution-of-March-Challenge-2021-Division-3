@@ -31,8 +31,8 @@ int main() {
             maxx.push_back(maxx2);
         }
         for(i=n-1;i>0;i--){
-            nd&=arr[i];
-            aor|=arr[i];
+            nd=arr[i];
+            aor=arr[i];
             maxx2=arr[i];
             for(j=i-1;j>0;j--){
                 nd&=arr[j];
