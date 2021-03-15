@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long unsigned int
+typedef long long int ll;
 vector<ll> pp1;
 vector<ll> pp2;
 bool isinrange(ll a,ll b){
@@ -9,14 +9,14 @@ bool isinrange(ll a,ll b){
             return true;
         }
     }
-    return false;
+    return false; 
 }
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
     ll t;
-    cin>>t;
+    cin>> t;
     while(t--){
         ll n,m,x,y;
         cin>>n>>m>>x>>y;
@@ -41,15 +41,15 @@ int main(){
         }
         q1.push_back(x);
         q2.push_back(x);
-        while((ans==-1)&&(q1.size()!=0)){
+        while((ans==-1) && (q1.size()!=0)){
             pp1.clear();
             pp2.clear();
             pp1=q1;
-            pp1=q2;
+            pp2=q2;
             vector<ll> w1;
             vector<ll> w2;
             for(ll i=0;i<(m);i++){
-                if((di[i]==0 )&& isinrange(a[i],b[i])){
+                if((di[i]==0) && isinrange(a[i],b[i])){
                     w1.push_back(c[i]);
                     w2.push_back(d[i]);
                     if(c[i]<=y && d[i]>=y){
